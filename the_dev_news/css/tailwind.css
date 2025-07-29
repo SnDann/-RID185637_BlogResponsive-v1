@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #20B2AA; /* teal-500 - Brand authority and trust-building moments */
+  --color-primary-dark: #1A9B94; /* teal-600 - Hover states and interactive feedback */
+  --color-accent: #26D0CE; /* teal-400 - Success states and achievement highlights */
+  
+  /* Background Colors */
+  --color-background: #FAFBFC; /* gray-50 - Clean reading canvas with subtle warmth */
+  --color-surface: #FFFFFF; /* white - Content cards and elevated elements */
+  
+  /* Text Colors */
+  --color-text-primary: #1A202C; /* gray-800 - Extended reading without eye strain */
+  --color-text-secondary: #4A5568; /* gray-600 - Metadata and supporting information hierarchy */
+  
+  /* Status Colors */
+  --color-success: #38A169; /* green-500 - Positive confirmations and completed actions */
+  --color-warning: #D69E2E; /* yellow-600 - Important notices without alarm */
+  --color-error: #E53E3E; /* red-500 - Clear problem identification with helpful tone */
+  
+  /* Border Colors */
+  --color-border: #E2E8F0; /* gray-200 - Form inputs and content separation */
+  
+  /* Shadow Values */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* Animation Timing */
+  --transition-fast: 200ms ease-out;
+  --transition-normal: 300ms ease-out;
+  --transition-slow: 400ms ease-out;
+}
+
+@layer base {
+  body {
+    font-family: 'Source Serif 4', serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-inter font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary-dark hover:shadow-hover;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg shadow-card border border-border;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

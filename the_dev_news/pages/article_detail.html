@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como Construir uma Carreira Sólida em Desenvolvimento Full-Stack - The Dev News</title>
+    <meta name="description" content="Descubra as estratégias essenciais para se tornar um desenvolvedor full-stack valorizado no mercado brasileiro, com foco em tecnologias modernas e crescimento sustentável." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthedevne7710back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-serif">
+    <!-- Header Navigation -->
+    <header class="bg-surface shadow-card sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M12 14l2 2 6-6" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="font-inter font-bold text-xl text-primary">The Dev News</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors duration-200">Home</a>
+                        <a href="search_results.html?category=desenvolvimento" class="text-text-secondary hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors duration-200">Desenvolvimento</a>
+                        <a href="search_results.html?category=produtividade" class="text-text-secondary hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors duration-200">Produtividade</a>
+                        <a href="search_results.html?category=saude" class="text-text-secondary hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors duration-200">Saúde</a>
+                        <a href="search_results.html?category=opiniao" class="text-text-secondary hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors duration-200">Opinião</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <button class="btn-primary">Assinar Newsletter</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-t border-border">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Home</a>
+                    <a href="search_results.html?category=desenvolvimento" class="text-text-secondary hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Desenvolvimento</a>
+                    <a href="search_results.html?category=produtividade" class="text-text-secondary hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Produtividade</a>
+                    <a href="search_results.html?category=saude" class="text-text-secondary hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Saúde</a>
+                    <a href="search_results.html?category=opiniao" class="text-text-secondary hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Opinião</a>
+                    <button class="btn-primary w-full mt-4">Assinar Newsletter</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="fixed top-16 left-0 w-full h-1 bg-gray-200 z-40">
+        <div id="progress-bar" class="h-full bg-primary transition-all duration-200" style="width: 0%"></div>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="bg-surface border-b border-border py-4">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <a href="search_results.html?category=desenvolvimento" class="text-text-secondary hover:text-primary transition-colors duration-200">Desenvolvimento</a>
+                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <span class="text-text-primary">Como Construir uma Carreira Sólida</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <main class="py-8 lg:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Main Article Content -->
+                <article class="lg:col-span-3">
+                    <!-- Article Header -->
+                    <header class="mb-8">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-inter font-semibold">Desenvolvimento</span>
+                            <time class="text-text-secondary text-sm">29 de julho de 2025</time>
+                            <div class="flex items-center space-x-1 text-text-secondary text-sm">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>12 min de leitura</span>
+                            </div>
+                        </div>
+                        
+                        <h1 class="text-4xl lg:text-5xl font-inter font-bold mb-6 leading-tight text-text-primary">
+                            Como Construir uma Carreira Sólida em Desenvolvimento Full-Stack
+                        </h1>
+                        
+                        <p class="text-xl text-text-secondary mb-8 leading-relaxed">
+                            Descubra as estratégias essenciais para se tornar um desenvolvedor full-stack valorizado no mercado brasileiro, com foco em tecnologias modernas e crescimento sustentável.
+                        </p>
+
+                        <!-- Author Info -->
+                        <div class="flex items-center justify-between border-t border-b border-border py-6">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Carlos Silva" class="w-15 h-15 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h3 class="font-inter font-semibold text-text-primary">Carlos Silva</h3>
+                                    <p class="text-text-secondary text-sm mb-1">Senior Full-Stack Developer na TechCorp</p>
+                                    <p class="text-text-secondary text-xs">8+ anos de experiência • São Paulo, Brasil</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Share & Actions -->
+                            <div class="flex items-center space-x-3">
+                                <button class="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors duration-200" title="Compartilhar no LinkedIn">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors duration-200" title="Compartilhar no Twitter">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors duration-200" title="Salvar artigo">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Featured Image -->
+                    <div class="mb-8">
+                        <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Desenvolvedor trabalhando em múltiplas telas" class="w-full h-64 lg:h-96 object-cover rounded-lg shadow-card" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            O mercado de desenvolvimento full-stack no Brasil está em constante evolução, e construir uma carreira sólida nessa área requer mais do que apenas conhecimento técnico. É preciso estratégia, planejamento e uma compreensão profunda das demandas do mercado atual.
+                        </p>
+
+                        <h2 class="text-2xl font-inter font-bold mt-8 mb-4 text-text-primary">1. Fundamentos Técnicos Essenciais</h2>
+                        
+                        <p class="mb-6">
+                            Para se destacar como desenvolvedor full-stack, é fundamental dominar tanto o frontend quanto o backend. No cenário brasileiro atual, algumas tecnologias se destacam:
+                        </p>
+
+                        <h3 class="text-xl font-inter font-semibold mt-6 mb-3 text-text-primary">Frontend Moderno</h3>
+                        
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>React.js</strong> - Continua sendo a biblioteca mais demandada no mercado brasileiro</li>
+                            <li><strong>Vue.js</strong> - Crescimento significativo em startups e empresas de médio porte</li>
+                            <li><strong>TypeScript</strong> - Essencial para projetos de grande escala</li>
+                            <li><strong>Tailwind CSS</strong> - Framework CSS que está revolucionando o desenvolvimento frontend</li>
+                        </ul>
+
+                        <div class="bg-gray-50 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+                            <p class="text-text-secondary italic">
+                                "A chave para o sucesso como full-stack não é conhecer todas as tecnologias, mas dominar profundamente as ferramentas certas e saber quando aplicá-las." - Carlos Silva
+                            </p>
+                        </div>
+
+                        <h3 class="text-xl font-inter font-semibold mt-6 mb-3 text-text-primary">Backend Robusto</h3>
+                        
+                        <p class="mb-4">
+                            No backend, a escolha da tecnologia deve considerar fatores como escalabilidade, performance e ecossistema:
+                        </p>
+
+                        <div class="bg-surface border border-border rounded-lg p-6 my-6">
+                            <h4 class="font-inter font-semibold mb-3">Exemplo de Stack Recomendada:</h4>
+                            <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code>// Node.js com Express e TypeScript
+import express from 'express';
+import { PrismaClient } from '@prisma/client';
+
+const app = express();
+const prisma = new PrismaClient();
+
+app.get('/api/users', async (req, res) => {
+  const users = await prisma.user.findMany();
+  res.json(users);
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000');
+});</code></pre>
+                        </div>
+
+                        <h2 class="text-2xl font-inter font-bold mt-8 mb-4 text-text-primary">2. Estratégias de Crescimento Profissional</h2>
+                        
+                        <p class="mb-6">
+                            Construir uma carreira sólida vai além das habilidades técnicas. É preciso desenvolver soft skills e uma mentalidade de crescimento contínuo.
+                        </p>
+
+                        <h3 class="text-xl font-inter font-semibold mt-6 mb-3 text-text-primary">Networking e Comunidade</h3>
+                        
+                        <p class="mb-4">
+                            Participar ativamente da comunidade de desenvolvedores brasileiros é fundamental:
+                        </p>
+
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>Contribua para projetos open source</li>
+                            <li>Participe de meetups e conferências</li>
+                            <li>Mantenha um perfil ativo no LinkedIn e GitHub</li>
+                            <li>Compartilhe conhecimento através de artigos e palestras</li>
+                        </ul>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                            <div class="card p-6">
+                                <h4 class="font-inter font-semibold mb-3 text-primary">Dica Pro</h4>
+                                <p class="text-sm text-text-secondary">
+                                    Crie um portfólio online que demonstre não apenas seus projetos, mas também seu processo de pensamento e resolução de problemas.
+                                </p>
+                            </div>
+                            <div class="card p-6">
+                                <h4 class="font-inter font-semibold mb-3 text-accent">Importante</h4>
+                                <p class="text-sm text-text-secondary">
+                                    Mantenha-se atualizado com as tendências do mercado, mas não corra atrás de toda nova tecnologia que surge.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-inter font-bold mt-8 mb-4 text-text-primary">3. Mercado de Trabalho Brasileiro</h2>
+                        
+                        <p class="mb-6">
+                            O mercado brasileiro de tecnologia está aquecido, mas é importante entender as nuances regionais e setoriais para posicionar sua carreira estrategicamente.
+                        </p>
+
+                        <h3 class="text-xl font-inter font-semibold mt-6 mb-3 text-text-primary">Oportunidades por Região</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full border-collapse border border-border">
+                                <thead>
+                                    <tr class="bg-gray-50">
+                                        <th class="border border-border px-4 py-2 text-left font-inter font-semibold">Região</th>
+                                        <th class="border border-border px-4 py-2 text-left font-inter font-semibold">Salário Médio</th>
+                                        <th class="border border-border px-4 py-2 text-left font-inter font-semibold">Principais Setores</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-border px-4 py-2">São Paulo</td>
+                                        <td class="border border-border px-4 py-2">R$ 8.000 - R$ 15.000</td>
+                                        <td class="border border-border px-4 py-2">Fintech, E-commerce, Startups</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-border px-4 py-2">Rio de Janeiro</td>
+                                        <td class="border border-border px-4 py-2">R$ 7.000 - R$ 13.000</td>
+                                        <td class="border border-border px-4 py-2">Petróleo, Telecomunicações</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-border px-4 py-2">Florianópolis</td>
+                                        <td class="border border-border px-4 py-2">R$ 6.500 - R$ 12.000</td>
+                                        <td class="border border-border px-4 py-2">Software Houses, Inovação</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="text-2xl font-inter font-bold mt-8 mb-4 text-text-primary">Conclusão</h2>
+                        
+                        <p class="mb-6">
+                            Construir uma carreira sólida em desenvolvimento full-stack é uma jornada que requer dedicação, estratégia e adaptabilidade. O mercado brasileiro oferece excelentes oportunidades para quem está disposto a investir no próprio crescimento e manter-se atualizado com as demandas do setor.
+                        </p>
+
+                        <p class="mb-6">
+                            Lembre-se: o sucesso não vem apenas do conhecimento técnico, mas da capacidade de resolver problemas reais, comunicar-se efetivamente e contribuir para o crescimento das equipes e organizações onde você atua.
+                        </p>
+
+                        <div class="bg-primary bg-opacity-10 border border-primary rounded-lg p-6 my-8">
+                            <h4 class="font-inter font-semibold mb-3 text-primary">Próximos Passos</h4>
+                            <ul class="list-disc pl-6 space-y-2 text-text-secondary">
+                                <li>Avalie suas habilidades atuais e identifique gaps</li>
+                                <li>Crie um plano de estudos focado em suas metas</li>
+                                <li>Construa projetos que demonstrem suas competências</li>
+                                <li>Conecte-se com outros profissionais da área</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Article Tags -->
+                    <div class="border-t border-border pt-6 mt-8">
+                        <h4 class="font-inter font-semibold mb-3 text-text-primary">Tags:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="search_results.html?tag=fullstack" class="bg-gray-100 hover:bg-primary hover:text-white text-text-secondary px-3 py-1 rounded-full text-sm transition-colors duration-200">Full-Stack</a>
+                            <a href="search_results.html?tag=carreira" class="bg-gray-100 hover:bg-primary hover:text-white text-text-secondary px-3 py-1 rounded-full text-sm transition-colors duration-200">Carreira</a>
+                            <a href="search_results.html?tag=react" class="bg-gray-100 hover:bg-primary hover:text-white text-text-secondary px-3 py-1 rounded-full text-sm transition-colors duration-200">React</a>
+                            <a href="search_results.html?tag=nodejs" class="bg-gray-100 hover:bg-primary hover:text-white text-text-secondary px-3 py-1 rounded-full text-sm transition-colors duration-200">Node.js</a>
+                            <a href="search_results.html?tag=typescript" class="bg-gray-100 hover:bg-primary hover:text-white text-text-secondary px-3 py-1 rounded-full text-sm transition-colors duration-200">TypeScript</a>
+                            <a href="search_results.html?tag=mercado-brasileiro" class="bg-gray-100 hover:bg-primary hover:text-white text-text-secondary px-3 py-1 rounded-full text-sm transition-colors duration-200">Mercado Brasileiro</a>
+                        </div>
+                    </div>
+
+                    <!-- Author Bio Extended -->
+                    <div class="card p-6 mt-8">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Carlos Silva" class="w-20 h-20 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h3 class="font-inter font-bold text-xl mb-2 text-text-primary">Carlos Silva</h3>
+                                <p class="text-text-secondary mb-4">
+                                    Senior Full-Stack Developer com mais de 8 anos de experiência no mercado brasileiro. Especialista em React, Node.js e arquiteturas escaláveis. Atualmente lidera uma equipe de 12 desenvolvedores na TechCorp e é mentor de novos talentos na área.
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                    <a href="javascript:void(0)" class="text-primary hover:text-primary-dark transition-colors duration-200">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="javascript:void(0)" class="text-primary hover:text-primary-dark transition-colors duration-200">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="javascript:void(0)" class="text-primary hover:text-primary-dark transition-colors duration-200">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                    <span class="text-text-secondary text-sm">23 artigos publicados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <section class="mt-12">
+                        <h3 class="text-2xl font-inter font-bold mb-6 text-text-primary">Comentários (8)</h3>
+                        
+                        <!-- Comment Form -->
+                        <div class="card p-6 mb-8">
+                            <h4 class="font-inter font-semibold mb-4 text-text-primary">Deixe seu comentário</h4>
+                            <form class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <input type="text" placeholder="Seu nome" class="px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200" />
+                                    <input type="email" placeholder="Seu email" class="px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200" />
+                                </div>
+                                <textarea rows="4" placeholder="Escreva seu comentário..." class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"></textarea>
+                                <button type="submit" class="btn-primary">Publicar Comentário</button>
+                            </form>
+                        </div>
+
+                        <!-- Comments List -->
+                        <div class="space-y-6">
+                            <!-- Comment 1 -->
+                            <div class="card p-6">
+                                <div class="flex items-start space-x-4">
+                                    <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg" alt="Ana Costa" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-2">
+                                            <h5 class="font-inter font-semibold text-text-primary">Ana Costa</h5>
+                                            <span class="text-text-secondary text-sm">há 2 horas</span>
+                                        </div>
+                                        <p class="text-text-secondary mb-3">
+                                            Excelente artigo, Carlos! Especialmente a parte sobre networking. Muitos desenvolvedores subestimam a importância de construir relacionamentos na área. Você tem alguma dica específica para quem é mais introvertido?
+                                        </p>
+                                        <div class="flex items-center space-x-4 text-sm">
+                                            <button class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                                <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                                                </svg>
+                                                Curtir (12)
+                                            </button>
+                                            <button class="text-text-secondary hover:text-primary transition-colors duration-200">Responder</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Comment 2 -->
+                            <div class="card p-6">
+                                <div class="flex items-start space-x-4">
+                                    <img src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?w=50&h=50&fit=crop&crop=face" alt="Pedro Oliveira" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-2">
+                                            <h5 class="font-inter font-semibold text-text-primary">Pedro Oliveira</h5>
+                                            <span class="text-text-secondary text-sm">há 5 horas</span>
+                                        </div>
+                                        <p class="text-text-secondary mb-3">
+                                            Muito bom o exemplo de código! Estou começando a migrar para TypeScript e essa estrutura vai me ajudar bastante. Você recomendaria algum curso específico para aprofundar em Prisma?
+                                        </p>
+                                        <div class="flex items-center space-x-4 text-sm">
+                                            <button class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                                <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                                                </svg>
+                                                Curtir (8)
+                                            </button>
+                                            <button class="text-text-secondary hover:text-primary transition-colors duration-200">Responder</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Load More Comments -->
+                            <div class="text-center">
+                                <button class="text-primary hover:text-primary-dark font-inter font-semibold transition-colors duration-200">
+                                    Carregar mais comentários (6 restantes)
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:col-span-1">
+                    <!-- Newsletter Signup -->
+                    <div class="card p-6 mb-8 sticky top-24">
+                        <h3 class="font-inter font-bold text-xl mb-4 text-text-primary">Newsletter The Dev News</h3>
+                        <p class="text-text-secondary mb-6 text-sm">
+                            Receba os melhores artigos sobre desenvolvimento, produtividade e carreira diretamente no seu email.
+                        </p>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Seu melhor email" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200" />
+                            <button type="submit" class="btn-primary w-full">
+                                Assinar Newsletter
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="card p-6 mb-8">
+                        <h3 class="font-inter font-bold text-xl mb-6 text-text-primary">Artigos Relacionados</h3>
+                        <div class="space-y-4">
+                            <article class="flex space-x-3">
+                                <img src="https://images.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg" alt="Microserviços" class="w-16 h-16 object-cover rounded-lg flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="font-inter font-semibold text-sm mb-1">
+                                        <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                            Arquitetura de Microserviços com Node.js
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-text-secondary mb-1">Pedro Oliveira</p>
+                                    <p class="text-xs text-text-secondary">18 min de leitura</p>
+                                </div>
+                            </article>
+
+                            <article class="flex space-x-3">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=64&h=64&fit=crop" alt="Metodologias Ágeis" class="w-16 h-16 object-cover rounded-lg flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="font-inter font-semibold text-sm mb-1">
+                                        <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                            Scrum vs Kanban: Qual Escolher?
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-text-secondary mb-1">Julia Ferreira</p>
+                                    <p class="text-xs text-text-secondary">12 min de leitura</p>
+                                </div>
+                            </article>
+
+                            <article class="flex space-x-3">
+                                <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?w=64&h=64&fit=crop" alt="Burnout" class="w-16 h-16 object-cover rounded-lg flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="font-inter font-semibold text-sm mb-1">
+                                        <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                            Como Prevenir o Burnout
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-text-secondary mb-1">Dr. Ricardo Mendes</p>
+                                    <p class="text-xs text-text-secondary">14 min de leitura</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Author's Other Posts -->
+                    <div class="card p-6">
+                        <h3 class="font-inter font-bold text-xl mb-6 text-text-primary">Mais de Carlos Silva</h3>
+                        <div class="space-y-4">
+                            <article>
+                                <h4 class="font-inter font-semibold text-sm mb-2">
+                                    <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                        React vs Vue.js: Qual Framework Escolher em 2025?
+                                    </a>
+                                </h4>
+                                <div class="flex items-center space-x-2 text-xs text-text-secondary">
+                                    <span>27 Jul 2025</span>
+                                    <span>•</span>
+                                    <span>15 min</span>
+                                    <span>•</span>
+                                    <span>42 comentários</span>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4 class="font-inter font-semibold text-sm mb-2">
+                                    <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                        10 Ferramentas Essenciais para Desenvolvedores
+                                    </a>
+                                </h4>
+                                <div class="flex items-center space-x-2 text-xs text-text-secondary">
+                                    <span>22 Jul 2025</span>
+                                    <span>•</span>
+                                    <span>8 min</span>
+                                    <span>•</span>
+                                    <span>28 comentários</span>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4 class="font-inter font-semibold text-sm mb-2">
+                                    <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                        TypeScript: Por que Todo Dev Deveria Aprender
+                                    </a>
+                                </h4>
+                                <div class="flex items-center space-x-2 text-xs text-text-secondary">
+                                    <span>18 Jul 2025</span>
+                                    <span>•</span>
+                                    <span>11 min</span>
+                                    <span>•</span>
+                                    <span>35 comentários</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Next Article Navigation -->
+    <section class="bg-surface border-t border-border py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Previous Article -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-8 h-8 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm text-text-secondary mb-1">Artigo Anterior</p>
+                        <h3 class="font-inter font-semibold">
+                            <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                React vs Vue.js: Qual Framework Escolher?
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Next Article -->
+                <div class="flex items-center space-x-4 md:justify-end text-right">
+                    <div>
+                        <p class="text-sm text-text-secondary mb-1">Próximo Artigo</p>
+                        <h3 class="font-inter font-semibold">
+                            <a href="article_detail.html" class="hover:text-primary transition-colors duration-200">
+                                10 Ferramentas de Produtividade Essenciais
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <svg class="w-8 h-8 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M12 14l2 2 6-6" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="font-inter font-bold text-xl text-primary">The Dev News</span>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        A voz autoritativa para desenvolvedores brasileiros em busca de crescimento técnico e profissional.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h3 class="font-inter font-semibold text-lg mb-4">Categorias</h3>
+                    <ul class="space-y-2">
+                        <li><a href="search_results.html?category=desenvolvimento" class="text-gray-300 hover:text-primary transition-colors duration-200">Desenvolvimento</a></li>
+                        <li><a href="search_results.html?category=produtividade" class="text-gray-300 hover:text-primary transition-colors duration-200">Produtividade</a></li>
+                        <li><a href="search_results.html?category=saude" class="text-gray-300 hover:text-primary transition-colors duration-200">Saúde & Bem-estar</a></li>
+                        <li><a href="search_results.html?category=opiniao" class="text-gray-300 hover:text-primary transition-colors duration-200">Opinião</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-inter font-semibold text-lg mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Guias de Carreira</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Ferramentas</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Newsletter</a></li>
+                        <li><a href="search_results.html" class="text-gray-300 hover:text-primary transition-colors duration-200">Arquivo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div>
+                    <h3 class="font-inter font-semibold text-lg mb-4">Comunidade</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Sobre Nós</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Contato</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Diretrizes Editoriais</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-colors duration-200">Escreva para Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm">
+                        © 2025 The Dev News. Todos os direitos reservados.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary text-sm transition-colors duration-200">Política de Privacidade</a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary text-sm transition-colors duration-200">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Scroll progress indicator
+        function updateProgressBar() {
+            const article = document.querySelector('article');
+            const progressBar = document.getElementById('progress-bar');
+            
+            if (article && progressBar) {
+                const articleTop = article.offsetTop;
+                const articleHeight = article.offsetHeight;
+                const windowHeight = window.innerHeight;
+                const scrollTop = window.pageYOffset;
+                
+                const progress = Math.min(
+                    Math.max((scrollTop - articleTop + windowHeight) / articleHeight, 0),
+                    1
+                );
+                
+                progressBar.style.width = `${progress * 100}%`;
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Social sharing functionality
+        document.querySelectorAll('button[title*="Compartilhar"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const title = document.title;
+                const url = window.location.href;
+                
+                if (this.title.includes('LinkedIn')) {
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+                } else if (this.title.includes('Twitter')) {
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+                }
+            });
+        });
+
+        // Bookmark functionality
+        document.querySelector('button[title="Salvar artigo"]').addEventListener('click', function() {
+            this.classList.toggle('text-primary');
+            const isBookmarked = this.classList.contains('text-primary');
+            
+            // Update icon fill
+            const svg = this.querySelector('svg');
+            if (isBookmarked) {
+                svg.setAttribute('fill', 'currentColor');
+                svg.setAttribute('stroke', 'none');
+            } else {
+                svg.setAttribute('fill', 'none');
+                svg.setAttribute('stroke', 'currentColor');
+            }
+            
+            // Show feedback
+            const feedback = isBookmarked ? 'Artigo salvo!' : 'Artigo removido dos salvos';
+            console.log(feedback); // In a real app, show a toast notification
+        });
+
+        // Comment form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Comentário enviado com sucesso! Aguarde a moderação.');
+            this.reset();
+        });
+
+        // Newsletter form submission
+        document.querySelectorAll('form').forEach(form => {
+            if (form.querySelector('input[type="email"][placeholder*="email"]')) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Obrigado por se inscrever na nossa newsletter!');
+                });
+            }
+        });
+
+        // Like button functionality
+        document.querySelectorAll('button:contains("Curtir")').forEach(button => {
+            button.addEventListener('click', function() {
+                const countSpan = this.textContent.match(/\((\d+)\)/);
+                if (countSpan) {
+                    const currentCount = parseInt(countSpan[1]);
+                    const newCount = this.classList.contains('liked') ? currentCount - 1 : currentCount + 1;
+                    this.innerHTML = this.innerHTML.replace(/\(\d+\)/, `(${newCount})`);
+                    this.classList.toggle('liked');
+                    this.classList.toggle('text-primary');
+                }
+            });
+        });
+
+        // Initialize scroll progress
+        window.addEventListener('scroll', updateProgressBar);
+        window.addEventListener('resize', updateProgressBar);
+        document.addEventListener('DOMContentLoaded', updateProgressBar);
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
